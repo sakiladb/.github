@@ -14,7 +14,6 @@ fixtures for [`sq`](https://github.com/neilotoole/sq) — but they're free for a
 | MySQL          | [sakiladb/mysql](https://github.com/sakiladb/mysql)                   | [`sakiladb/mysql`](https://hub.docker.com/r/sakiladb/mysql)                   |
 | PostgreSQL     | [sakiladb/postgres](https://github.com/sakiladb/postgres)             | [`sakiladb/postgres`](https://hub.docker.com/r/sakiladb/postgres)             |
 | SQL Server     | [sakiladb/sqlserver](https://github.com/sakiladb/sqlserver)           | [`sakiladb/sqlserver`](https://hub.docker.com/r/sakiladb/sqlserver)           |
-| Azure SQL Edge | [sakiladb/azure-sql-edge](https://github.com/sakiladb/azure-sql-edge) | [`sakiladb/azure-sql-edge`](https://hub.docker.com/r/sakiladb/azure-sql-edge) |
 | Oracle         | [sakiladb/oracle](https://github.com/sakiladb/oracle)                 | [`sakiladb/oracle`](https://hub.docker.com/r/sakiladb/oracle)                 |
 | ClickHouse     | [sakiladb/clickhouse](https://github.com/sakiladb/clickhouse)         | [`sakiladb/clickhouse`](https://hub.docker.com/r/sakiladb/clickhouse)         |
 | rqlite         | [sakiladb/rqlite](https://github.com/sakiladb/rqlite)                 | [`sakiladb/rqlite`](https://hub.docker.com/r/sakiladb/rqlite)                 |
