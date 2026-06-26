@@ -3,9 +3,10 @@
 Docker images preloaded with the [Sakila](https://dev.mysql.com/doc/sakila/en/) sample database —
 one per database engine.
 
-Every image carries the same dataset, derived from the canonical MySQL Sakila (via
-[jOOQ](https://www.jooq.org/sakila)) and adapted to each engine. They exist primarily as test
-fixtures for [`sq`](https://github.com/neilotoole/sq) — but they're free for anyone to use.
+Every image carries the same dataset — a uniform **16 tables + 7 views**, identical across engines —
+derived from the canonical MySQL Sakila (via [jOOQ](https://www.jooq.org/sakila)) and adapted to each
+engine. They exist primarily as test fixtures for [`sq`](https://github.com/neilotoole/sq) — but
+they're free for anyone to use.
 
 ## Images
 
@@ -28,6 +29,11 @@ docker run -p 5432:5432 -d sakiladb/postgres
 
 Most images default to database / user / password `sakila` / `sakila` / `p_ssW0rd`. Image tags,
 connection details, and engine-specific notes live in each repo's README.
+
+Every image is published to both [Docker Hub](https://hub.docker.com/u/sakiladb) and the
+[GitHub Container Registry](https://github.com/orgs/sakiladb/packages) — pull from either, e.g.
+`docker pull sakiladb/postgres` or `docker pull ghcr.io/sakiladb/postgres`. Builds are multi-arch
+(`linux/amd64` + `linux/arm64`, except SQL Server which is amd64-only) and cosign-signed.
 
 ## Built for sq
 
