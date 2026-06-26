@@ -1,11 +1,11 @@
 # Sakila DB
 
-Docker images preloaded with the [Sakila](https://dev.mysql.com/doc/sakila/en/) sample database —
+Docker images preloaded with the [Sakila](https://dev.mysql.com/doc/sakila/en/) sample database,
 one per database engine.
 
-Every image carries the same dataset — a uniform **16 tables + 7 views**, identical across engines —
+Every image carries the same dataset: a uniform **16 tables + 7 views**, identical across engines,
 derived from the canonical MySQL Sakila (via [jOOQ](https://www.jooq.org/sakila)) and adapted to each
-engine. They exist primarily as test fixtures for [`sq`](https://github.com/neilotoole/sq) — but
+engine. They exist primarily as test fixtures for [`sq`](https://github.com/neilotoole/sq), but
 they're free for anyone to use.
 
 ## Images
@@ -15,7 +15,7 @@ identical, cosign-signed images. Pull from whichever you prefer.
 
 | Engine | Docker Hub | GHCR | Versions | Architectures |
 |--------|------------|------|----------|---------------|
-| [PostgreSQL](https://github.com/sakiladb/postgres) | [`sakiladb/postgres`](https://hub.docker.com/r/sakiladb/postgres) | [`ghcr.io/sakiladb/postgres`](https://github.com/orgs/sakiladb/packages/container/package/postgres) | `9`–`17`, **`18`** | `amd64`, `arm64` |
+| [PostgreSQL](https://github.com/sakiladb/postgres) | [`sakiladb/postgres`](https://hub.docker.com/r/sakiladb/postgres) | [`ghcr.io/sakiladb/postgres`](https://github.com/orgs/sakiladb/packages/container/package/postgres) | `9` to `17`, **`18`** | `amd64`, `arm64` |
 | [MySQL](https://github.com/sakiladb/mysql) | [`sakiladb/mysql`](https://hub.docker.com/r/sakiladb/mysql) | [`ghcr.io/sakiladb/mysql`](https://github.com/orgs/sakiladb/packages/container/package/mysql) | `5.6`, `5.7`, `8`, **`9`** | `amd64` (all), `arm64` (`8`/`9`) |
 | [SQL Server](https://github.com/sakiladb/sqlserver) | [`sakiladb/sqlserver`](https://hub.docker.com/r/sakiladb/sqlserver) | [`ghcr.io/sakiladb/sqlserver`](https://github.com/orgs/sakiladb/packages/container/package/sqlserver) | `2019`, **`2022`** | `amd64` |
 | [Oracle](https://github.com/sakiladb/oracle) | [`sakiladb/oracle`](https://hub.docker.com/r/sakiladb/oracle) | [`ghcr.io/sakiladb/oracle`](https://github.com/orgs/sakiladb/packages/container/package/oracle) | **`23`** | `amd64`, `arm64` |
