@@ -10,14 +10,21 @@ they're free for anyone to use.
 
 ## Images
 
-| Engine         | Source                                                                | Image                                                                         |
-|----------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| MySQL          | [sakiladb/mysql](https://github.com/sakiladb/mysql)                   | [`sakiladb/mysql`](https://hub.docker.com/r/sakiladb/mysql)                   |
-| PostgreSQL     | [sakiladb/postgres](https://github.com/sakiladb/postgres)             | [`sakiladb/postgres`](https://hub.docker.com/r/sakiladb/postgres)             |
-| SQL Server     | [sakiladb/sqlserver](https://github.com/sakiladb/sqlserver)           | [`sakiladb/sqlserver`](https://hub.docker.com/r/sakiladb/sqlserver)           |
-| Oracle         | [sakiladb/oracle](https://github.com/sakiladb/oracle)                 | [`sakiladb/oracle`](https://hub.docker.com/r/sakiladb/oracle)                 |
-| ClickHouse     | [sakiladb/clickhouse](https://github.com/sakiladb/clickhouse)         | [`sakiladb/clickhouse`](https://hub.docker.com/r/sakiladb/clickhouse)         |
-| rqlite         | [sakiladb/rqlite](https://github.com/sakiladb/rqlite)                 | [`sakiladb/rqlite`](https://hub.docker.com/r/sakiladb/rqlite)                 |
+Every engine is published to **both** Docker Hub and the GitHub Container Registry (GHCR) as
+identical, cosign-signed images. Pull from whichever you prefer.
+
+| Engine | Docker Hub | GHCR | Versions | Architectures |
+|--------|------------|------|----------|---------------|
+| [PostgreSQL](https://github.com/sakiladb/postgres) | [`sakiladb/postgres`](https://hub.docker.com/r/sakiladb/postgres) | `ghcr.io/sakiladb/postgres` | `9`–`17`, **`18`** | `amd64`, `arm64` |
+| [MySQL](https://github.com/sakiladb/mysql) | [`sakiladb/mysql`](https://hub.docker.com/r/sakiladb/mysql) | `ghcr.io/sakiladb/mysql` | `5.6`, `5.7`, `8`, **`9`** | `amd64` (all), `arm64` (`8`/`9`) |
+| [SQL Server](https://github.com/sakiladb/sqlserver) | [`sakiladb/sqlserver`](https://hub.docker.com/r/sakiladb/sqlserver) | `ghcr.io/sakiladb/sqlserver` | `2019`, **`2022`** | `amd64` |
+| [Oracle](https://github.com/sakiladb/oracle) | [`sakiladb/oracle`](https://hub.docker.com/r/sakiladb/oracle) | `ghcr.io/sakiladb/oracle` | **`23`** | `amd64`, `arm64` |
+| [ClickHouse](https://github.com/sakiladb/clickhouse) | [`sakiladb/clickhouse`](https://hub.docker.com/r/sakiladb/clickhouse) | `ghcr.io/sakiladb/clickhouse` | **`25`** | `amd64`, `arm64` |
+| [rqlite](https://github.com/sakiladb/rqlite) | [`sakiladb/rqlite`](https://hub.docker.com/r/sakiladb/rqlite) | `ghcr.io/sakiladb/rqlite` | **`10`** | `amd64`, `arm64` |
+
+The **bold** version is what `:latest` points at; every image is also tagged by its major version
+(e.g. `sakiladb/postgres:16`). The `amd64`/`arm64` arch values above are short for `linux/amd64` and
+`linux/arm64`.
 
 ## Quick start
 
@@ -27,13 +34,10 @@ For example, PostgreSQL:
 docker run -p 5432:5432 -d sakiladb/postgres
 ```
 
+The same image is on GHCR, if you prefer: `docker pull ghcr.io/sakiladb/postgres`.
+
 Most images default to database / user / password `sakila` / `sakila` / `p_ssW0rd`. Image tags,
 connection details, and engine-specific notes live in each repo's README.
-
-Every image is published to both [Docker Hub](https://hub.docker.com/u/sakiladb) and the
-[GitHub Container Registry](https://github.com/orgs/sakiladb/packages) — pull from either, e.g.
-`docker pull sakiladb/postgres` or `docker pull ghcr.io/sakiladb/postgres`. Builds are multi-arch
-(`linux/amd64` + `linux/arm64`, except SQL Server which is amd64-only) and cosign-signed.
 
 ## Built for sq
 
