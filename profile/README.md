@@ -15,12 +15,12 @@ identical, cosign-signed images. Pull from whichever you prefer.
 
 | Engine | Docker Hub | GHCR | Versions | Architectures |
 |--------|------------|------|----------|---------------|
-| [PostgreSQL](https://github.com/sakiladb/postgres) | [`sakiladb/postgres`](https://hub.docker.com/r/sakiladb/postgres) | `ghcr.io/sakiladb/postgres` | `9`–`17`, **`18`** | `amd64`, `arm64` |
-| [MySQL](https://github.com/sakiladb/mysql) | [`sakiladb/mysql`](https://hub.docker.com/r/sakiladb/mysql) | `ghcr.io/sakiladb/mysql` | `5.6`, `5.7`, `8`, **`9`** | `amd64` (all), `arm64` (`8`/`9`) |
-| [SQL Server](https://github.com/sakiladb/sqlserver) | [`sakiladb/sqlserver`](https://hub.docker.com/r/sakiladb/sqlserver) | `ghcr.io/sakiladb/sqlserver` | `2019`, **`2022`** | `amd64` |
-| [Oracle](https://github.com/sakiladb/oracle) | [`sakiladb/oracle`](https://hub.docker.com/r/sakiladb/oracle) | `ghcr.io/sakiladb/oracle` | **`23`** | `amd64`, `arm64` |
-| [ClickHouse](https://github.com/sakiladb/clickhouse) | [`sakiladb/clickhouse`](https://hub.docker.com/r/sakiladb/clickhouse) | `ghcr.io/sakiladb/clickhouse` | **`25`** | `amd64`, `arm64` |
-| [rqlite](https://github.com/sakiladb/rqlite) | [`sakiladb/rqlite`](https://hub.docker.com/r/sakiladb/rqlite) | `ghcr.io/sakiladb/rqlite` | **`10`** | `amd64`, `arm64` |
+| [PostgreSQL](https://github.com/sakiladb/postgres) | [`sakiladb/postgres`](https://hub.docker.com/r/sakiladb/postgres) | [`ghcr.io/sakiladb/postgres`](https://github.com/orgs/sakiladb/packages/container/package/postgres) | `9`–`17`, **`18`** | `amd64`, `arm64` |
+| [MySQL](https://github.com/sakiladb/mysql) | [`sakiladb/mysql`](https://hub.docker.com/r/sakiladb/mysql) | [`ghcr.io/sakiladb/mysql`](https://github.com/orgs/sakiladb/packages/container/package/mysql) | `5.6`, `5.7`, `8`, **`9`** | `amd64` (all), `arm64` (`8`/`9`) |
+| [SQL Server](https://github.com/sakiladb/sqlserver) | [`sakiladb/sqlserver`](https://hub.docker.com/r/sakiladb/sqlserver) | [`ghcr.io/sakiladb/sqlserver`](https://github.com/orgs/sakiladb/packages/container/package/sqlserver) | `2019`, **`2022`** | `amd64` |
+| [Oracle](https://github.com/sakiladb/oracle) | [`sakiladb/oracle`](https://hub.docker.com/r/sakiladb/oracle) | [`ghcr.io/sakiladb/oracle`](https://github.com/orgs/sakiladb/packages/container/package/oracle) | **`23`** | `amd64`, `arm64` |
+| [ClickHouse](https://github.com/sakiladb/clickhouse) | [`sakiladb/clickhouse`](https://hub.docker.com/r/sakiladb/clickhouse) | [`ghcr.io/sakiladb/clickhouse`](https://github.com/orgs/sakiladb/packages/container/package/clickhouse) | **`25`** | `amd64`, `arm64` |
+| [rqlite](https://github.com/sakiladb/rqlite) | [`sakiladb/rqlite`](https://hub.docker.com/r/sakiladb/rqlite) | [`ghcr.io/sakiladb/rqlite`](https://github.com/orgs/sakiladb/packages/container/package/rqlite) | **`10`** | `amd64`, `arm64` |
 
 The **bold** version is what `:latest` points at; every image is also tagged by its major version
 (e.g. `sakiladb/postgres:16`). The `amd64`/`arm64` arch values above are short for `linux/amd64` and
