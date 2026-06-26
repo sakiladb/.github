@@ -41,16 +41,16 @@ connection details, and engine-specific notes live in each repo's README.
 
 ## File-based fixtures
 
-The same Sakila dataset also ships as **file-based fixtures** — for the formats that aren't a database
-server — embedded in the [`sq`](https://github.com/neilotoole/sq) repo. They carry the same data,
+The same Sakila dataset also ships as **file-based fixtures** (for the formats that aren't a database
+server), embedded in the [`sq`](https://github.com/neilotoole/sq) repo. They carry the same data,
 byte-faithful to the canonical MySQL Sakila.
 
 | Format | Location (in the `sq` repo) | Contents |
 |--------|-----------------------------|----------|
-| SQLite | [`drivers/sqlite3/testdata`](https://github.com/neilotoole/sq/tree/master/drivers/sqlite3/testdata) | `sakila.db` — the canonical source the other file fixtures derive from (plus `_diff` / `_whitespace` / `_fts5` variants) |
+| SQLite | [`drivers/sqlite3/testdata`](https://github.com/neilotoole/sq/tree/master/drivers/sqlite3/testdata) | `sakila.db`, the canonical source the other file fixtures derive from (plus `_diff` / `_whitespace` / `_fts5` variants) |
 | DuckDB | [`drivers/duckdb/testdata`](https://github.com/neilotoole/sq/tree/master/drivers/duckdb/testdata) | `sakila.duckdb` (plus the same variants) |
 | CSV / TSV | [`drivers/csv/testdata`](https://github.com/neilotoole/sq/tree/master/drivers/csv/testdata) | one file per table, with and without a header row (`sakila-csv`, `sakila-csv-noheader`, `sakila-tsv`, `sakila-tsv-noheader`) |
-| Excel | [`drivers/xlsx/testdata`](https://github.com/neilotoole/sq/tree/master/drivers/xlsx/testdata) | `sakila.xlsx` — one sheet per table (plus subset and no-header workbooks) |
+| Excel | [`drivers/xlsx/testdata`](https://github.com/neilotoole/sq/tree/master/drivers/xlsx/testdata) | `sakila.xlsx`, one sheet per table (plus subset and no-header workbooks) |
 | JSON | [`drivers/json/testdata`](https://github.com/neilotoole/sq/tree/master/drivers/json/testdata) | `actor` / `film_actor` / `payment` as `.json`, `.jsona`, and `.jsonl` |
 
 ## Built for sq
