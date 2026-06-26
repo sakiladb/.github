@@ -3,6 +3,9 @@
 Docker images preloaded with the [Sakila](https://dev.mysql.com/doc/sakila/en/) sample database,
 one per database engine.
 
+> [!NOTE]
+> **Why?** The various sakiladb images exist as test fixtures. Mainly for [`sq`](https://github.com/neilotoole/sq).
+
 Every image carries the same dataset: a uniform **16 tables + 7 views**, identical across engines,
 derived from the canonical MySQL Sakila (via [jOOQ](https://www.jooq.org/sakila)) and adapted to each
 engine. They exist primarily as test fixtures for [`sq`](https://github.com/neilotoole/sq), but
