@@ -66,7 +66,7 @@ The **bold** version is what `:latest` points at; every image is also tagged by 
 `linux/arm64`.
 
 Every image declares a Docker **`HEALTHCHECK`** using its engine's native readiness probe, so the
-container reports `healthy` once it's ready to serve — use `--health`/`service_healthy` to wait for
+container reports `healthy` once it's ready to serve: use `--health`/`service_healthy` to wait for
 readiness instead of polling.
 
 ## Quick start
