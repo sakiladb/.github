@@ -66,8 +66,8 @@ The **bold** version is what `:latest` points at; every image is also tagged by 
 `linux/arm64`.
 
 Every image declares a Docker **[`HEALTHCHECK`](https://docs.docker.com/reference/dockerfile/#healthcheck)** using its engine's native readiness probe, so the
-container reports `healthy` once it's ready to serve: use `--health`/[`service_healthy`](https://docs.docker.com/reference/compose-file/services/#depends_on) to wait for
-readiness instead of polling.
+container reports `healthy` once it's ready to serve. Orchestrators can wait on that (Compose
+[`service_healthy`](https://docs.docker.com/reference/compose-file/services/#depends_on), GitHub Actions `services:`) instead of a fixed `sleep`.
 
 ## Quick start
 
