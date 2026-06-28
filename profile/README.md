@@ -13,6 +13,40 @@ derived from the canonical MySQL Sakila (via [jOOQ](https://www.jooq.org/sakila)
 engine. They exist primarily as test fixtures for [`sq`](https://github.com/neilotoole/sq), but
 they're free for anyone to use.
 
+[`sq inspect`](https://sq.io/docs/inspect) shows the whole schema at a glance — tables, views, row
+counts, and columns. It's the same on every engine; here it is on the canonical MySQL image:
+
+```shell
+$ sq inspect @sakila_my
+SOURCE      DRIVER  NAME    FQ NAME     SIZE   TABLES  VIEWS  LOCATION
+@sakila_my  mysql   sakila  def.sakila  1.8MB  16      7      mysql://sakila:xxxxx@localhost:3306/sakila
+
+NAME                        TYPE   ROWS   COLS
+actor                       table  200    actor_id, first_name, last_name, last_update
+address                     table  603    address_id, address, address2, district, city_id, postal_code, phone, last_update
+category                    table  16     category_id, name, last_update
+city                        table  600    city_id, city, country_id, last_update
+country                     table  109    country_id, country, last_update
+customer                    table  599    customer_id, store_id, first_name, last_name, email, address_id, active, create_date, last_update
+film                        table  1000   film_id, title, description, release_year, language_id, original_language_id, rental_duration, rental_rate, length, replacement_cost, rating, special_features, last_update
+film_actor                  table  5462   actor_id, film_id, last_update
+film_category               table  1000   film_id, category_id, last_update
+film_text                   table  1000   film_id, title, description
+inventory                   table  4581   inventory_id, film_id, store_id, last_update
+language                    table  6      language_id, name, last_update
+payment                     table  16049  payment_id, customer_id, staff_id, rental_id, amount, payment_date, last_update
+rental                      table  16044  rental_id, rental_date, inventory_id, customer_id, return_date, staff_id, last_update
+staff                       table  2      staff_id, first_name, last_name, address_id, picture, email, store_id, active, username, password, last_update
+store                       table  2      store_id, manager_staff_id, address_id, last_update
+actor_info                  view   200    actor_id, first_name, last_name, film_info
+customer_list               view   599    ID, name, address, zip code, phone, city, country, notes, SID
+film_list                   view   997    FID, title, description, category, price, length, rating, actors
+nicer_but_slower_film_list  view   997    FID, title, description, category, price, length, rating, actors
+sales_by_film_category      view   16     category, total_sales
+sales_by_store              view   2      store, manager, total_sales
+staff_list                  view   2      ID, name, address, zip code, phone, city, country, SID
+```
+
 ## Images
 
 Every engine is published to **both** Docker Hub and the GitHub Container Registry (GHCR) as
