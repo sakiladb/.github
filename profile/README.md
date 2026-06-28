@@ -14,7 +14,8 @@ engine. They exist primarily as test fixtures for [`sq`](https://github.com/neil
 they're free for anyone to use.
 
 [`sq inspect`](https://sq.io/docs/inspect) shows the whole schema at a glance — tables, views, row
-counts, and columns. It's the same on every engine; here it is on the canonical MySQL image:
+counts, and columns. It's the same on every engine; here it is on the canonical
+[sakiladb/mysql](https://github.com/sakiladb/mysql) image:
 
 ```shell
 $ sq inspect @sakila_my
