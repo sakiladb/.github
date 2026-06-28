@@ -65,8 +65,8 @@ The **bold** version is what `:latest` points at; every image is also tagged by 
 (e.g. `sakiladb/postgres:16`). The `amd64`/`arm64` arch values above are short for `linux/amd64` and
 `linux/arm64`.
 
-Every image declares a Docker **`HEALTHCHECK`** using its engine's native readiness probe, so the
-container reports `healthy` once it's ready to serve: use `--health`/`service_healthy` to wait for
+Every image declares a Docker **[`HEALTHCHECK`](https://docs.docker.com/reference/dockerfile/#healthcheck)** using its engine's native readiness probe, so the
+container reports `healthy` once it's ready to serve: use `--health`/[`service_healthy`](https://docs.docker.com/reference/compose-file/services/#depends_on) to wait for
 readiness instead of polling.
 
 ## Quick start
@@ -78,6 +78,11 @@ docker run -p 5432:5432 -d sakiladb/postgres
 ```
 
 The same image is on GHCR, if you prefer: `docker pull ghcr.io/sakiladb/postgres`.
+
+> [!TIP]
+> **Building or testing on GitHub Actions? Pull from GHCR** (`ghcr.io/sakiladb/…`). Docker Hub
+> rate-limits pulls and CI runners share IP addresses, so the limit is reached quickly; GHCR isn't
+> throttled the same way, especially from within GitHub's network.
 
 Most images default to database / user / password `sakila` / `sakila` / `p_ssW0rd`. Image tags,
 connection details, and engine-specific notes live in each repo's README.
