@@ -51,7 +51,7 @@ staff_list                  view   2      ID, name, address, zip code, phone, ci
 ## Images
 
 Every engine is published to **both** Docker Hub and the GitHub Container Registry (GHCR) as
-identical, cosign-signed images. Pull from whichever you prefer.
+identical, [cosign](https://github.com/sigstore/cosign)-signed images. Pull from whichever you prefer.
 
 | Engine                                               | Docker Hub                                                            | GHCR                                                                                                    | Versions                   | Architectures                    |
 | ---------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------- | -------------------------------- |
