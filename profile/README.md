@@ -64,7 +64,7 @@ identical, [cosign](https://github.com/sigstore/cosign)-signed images. Pull from
 | [rqlite](https://github.com/sakiladb/rqlite)         | [`sakiladb/rqlite`](https://hub.docker.com/r/sakiladb/rqlite)         | [`ghcr.io/sakiladb/rqlite`](https://github.com/orgs/sakiladb/packages/container/package/rqlite)         | **`10`**                   | `amd64`, `arm64`                 |
 
 The **bold** version is what `:latest` points at; every image is also tagged by its major version
-(e.g. `sakiladb/postgres:16`). The `amd64`/`arm64` arch values above are short for `linux/amd64` and
+(e.g. `sakiladb/postgres:12` or `sakiladb/postgres:18`). The `amd64`/`arm64` arch values above are short for `linux/amd64` and
 `linux/arm64`.
 
 Every image declares a Docker **[`HEALTHCHECK`](https://docs.docker.com/reference/dockerfile/#healthcheck)** using its engine's native readiness probe, so the
