@@ -48,6 +48,11 @@ sales_by_store              view   2      store, manager, total_sales
 staff_list                  view   2      ID, name, address, zip code, phone, city, country, SID
 ```
 
+> [!NOTE]
+> The schema is the same on every engine, with one exception: ClickHouse omits the binary
+> `staff.picture` column (it has no native binary type), so its `staff` table has 10 columns instead
+> of the usual 11. Every other engine, including Oracle, carries it.
+
 ## Images
 
 Every engine is published to **both** Docker Hub and the GitHub Container Registry (GHCR) as
