@@ -56,7 +56,10 @@ staff_list                  view   2      ID, name, address, zip code, phone, ci
 ## Images
 
 Every engine is published to **both** Docker Hub and the GitHub Container Registry (GHCR) as
-identical, [cosign](https://github.com/sigstore/cosign)-signed images. Pull from whichever you prefer.
+identical, [cosign](https://github.com/sigstore/cosign)-signed images that also carry
+[SLSA build provenance](https://slsa.dev/) and an SPDX [SBOM](https://spdx.dev/) attestation. Pull
+from whichever you prefer, and verify any image with
+`gh attestation verify oci://ghcr.io/sakiladb/<engine>:<tag> --repo sakiladb/<engine>`.
 
 | Engine                                               | Docker Hub                                                            | GHCR                                                                                                    | Versions                   | Architectures                    |
 | ---------------------------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | -------------------------- | -------------------------------- |
